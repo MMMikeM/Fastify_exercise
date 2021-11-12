@@ -9,7 +9,7 @@ services:
       - 3000:3000
     container_name: nodecontainer
     env_file:
-      - .env
+      - ./.env
     volumes:
       - ./:/usr/src/
     depends_on:
