@@ -14,7 +14,7 @@ services:
       - ./:/usr/src/
     depends_on:
       - db
-    command: "pnpm start"
+    command: "pnpm dev"
 
   db:
     stdin_open: true

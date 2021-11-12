@@ -7,3 +7,4 @@ RUN mkdir /usr/src
 COPY . /usr/src
 WORKDIR /usr/src
 RUN pnpm install
+ENV PORT 3000
