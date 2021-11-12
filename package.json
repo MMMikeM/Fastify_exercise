@@ -1,0 +1,29 @@
+{
+  "name": "prismaproject",
+  "version": "1.0.0",
+  "description": "An exercise to brush up on prisma things",
+  "main": "/src/server.ts",
+  "scripts": {
+    "dev": "node-dev --respawn ./src/server.ts",
+    "start": "ts-node ./src/server.ts"
+  },
+  "author": "Mike Murray",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^3.4.2",
+    "fastify": "^3.22.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "node-dev": "^7.1.0",
+    "prettier": "^2.4.1",
+    "prisma": "^3.4.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}

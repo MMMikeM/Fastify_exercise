@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  node:
+    stdin_open: true
+    tty: true
+    build: .
+    ports:
+      - 3000:3000
+    container_name: nodecontainer
+    env_file:
+      - .env
+    volumes:
+      - ./:/usr/src/
+    depends_on:
+      - db
+    command: "pnpm start"
+
+  db:
+    stdin_open: true
+    tty: true
+    image: postgres:13-alpine
+    restart: "always"
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+    container_name: prismafilestore
+    environment:
+      POSTGRES_USER: secureuser
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_DB: prismafilestore
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
