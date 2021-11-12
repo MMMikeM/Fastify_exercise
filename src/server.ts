@@ -4,13 +4,12 @@ const app = Fastify({
   logger: true,
 })
 
-// Declare a route
 app.get("/", (request, reply) => {
-  reply.send({ hello: "world" })
+  console.log(request)
+  reply.send({ _: "Work already! Be real" })
 })
 
-// Run the server!
 app.listen(3000, (err, address) => {
   if (err) throw err
-  // Server is now listening on ${address}
+  console.log(`server listening on ${address}`)
 })
